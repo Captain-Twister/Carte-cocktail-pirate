@@ -410,6 +410,24 @@ footer .law{
   .card{break-inside:avoid}
 }
 
+
+.gspot .hitc{fill:transparent}
+.gspot{opacity:0;pointer-events:none;transition:opacity 2.4s ease}
+.gspot.show{opacity:1;pointer-events:auto;cursor:pointer}
+.gspot .lbl{font-family:'Pirata One',serif;font-size:26px;text-anchor:middle;paint-order:stroke;stroke:#f0e2b8;stroke-width:6px}
+.hintg{font-size:.88rem;font-style:italic;color:#5b4122;margin-top:.8rem;line-height:1.4;border-top:1px dashed #3a2812;padding-top:.7rem}
+#sdlg{border:none;padding:0;background:transparent;max-width:min(92vw,480px);width:100%;color:#3a2812}
+#sdlg::backdrop{background:rgba(3,8,12,.88)}
+#sdlg .tbox{background:linear-gradient(#e6eeee,#c6d6d4);border-color:#2b4a4e}
+#sdlg .word{color:#2b4a4e;border-color:#2b4a4e}
+.rec{text-align:left;font-size:.88rem;border-top:1px dashed #3a2812;margin-top:.9rem;padding-top:.6rem}
+.rec h4{font-family:'Pirata One',serif;font-weight:400;font-size:1.3rem}
+.rec ul{margin:.3rem 0 .3rem 1.1rem}
+
+.legend{margin-top:1rem;padding:.8rem .9rem;border:2px solid #8c2a1a;border-radius:8px;background:rgba(140,42,26,.08);text-align:left}
+.legend h3{font-family:'Pirata One',serif;font-weight:400;font-size:1.5rem;color:#8c2a1a;text-align:center;margin-bottom:.3rem}
+.legend p{font-size:.95rem;margin:.3rem 0}
+.legend ol{margin:.4rem 0 0 1.4rem;font-style:italic;font-size:1.02rem;line-height:1.55}
 /* Brouillard + trésor final */
 .fogg .fb{transition:opacity 1.6s ease;pointer-events:none}
 .fogg .fb.gone{opacity:0}
@@ -478,7 +496,7 @@ footer .law{
   </svg>
 
   <h1>La Carte du Black Pearl</h1>
-  <p class="sub">Vingt escales entre Tortuga et le trésor, rhum, malédictions et gorgées d'or</p>
+  <p class="sub">Trente escales entre Tortuga et le trésor, rhum, malédictions et gorgées d'or</p>
 
   <svg class="route" viewBox="0 0 1000 130" aria-hidden="true">
     <defs><path id="p" d="M50,95 C190,10 320,125 500,70 S800,5 930,78"/></defs>
@@ -497,8 +515,8 @@ footer .law{
   <p class="motto">Yo ho ho · Que la marée vous soit favorable</p>
 
   <div class="legend">
-    <span><b>15 Cocktails</b></span>
-    <span><b>5 Sans alcool</b></span>
+    <span><b>21 Cocktails</b></span>
+    <span><b>9 Sans alcool</b></span>
     <span><b>✦ Effet spécial</b> · un petit verre à verser dans le cocktail</span>
     <span class="tapnote">Touche un cocktail pour le voir se préparer sous tes yeux.</span>
   </div>
@@ -510,8 +528,8 @@ footer .law{
   <button type="button" class="vbtn" id="vList" aria-pressed="false">📜 Liste des boissons</button>
 </div>
 <section id="view-map" class="mapview" aria-label="Carte de l’archipel">
-  <p class="explo" id="explo">Lieux explorés : <b id="nSeen">0</b> / 20</p>
-  <div class="mapscroll" id="mapscroll"><svg id="mapsvg" class="mapsvg" viewBox="0 0 900 1300" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Carte de l’archipel avec les 20 boissons"></svg></div>
+  <p class="explo" id="explo">Lieux explorés : <b id="nSeen">0</b> / 30</p>
+  <div class="mapscroll" id="mapscroll"><svg id="mapsvg" class="mapsvg" viewBox="0 0 900 2040" xmlns="http://www.w3.org/2000/svg" role="group" aria-label="Carte de l’archipel avec les 20 boissons"></svg></div>
   <p class="panhint">↔ Fais glisser pour explorer, touche un lieu pour le visiter</p>
 </section>
 
@@ -535,7 +553,7 @@ footer .law{
     <p class="gtop">Une carte vous attend</p>
     <div class="gscroll">
       <div class="groll"></div>
-      <div class="gsheet"><div class="gin"><p class="gk">Carte du</p><h2>Black Pearl</h2><p class="gs">Vingt escales entre Tortuga et le trésor</p></div></div>
+      <div class="gsheet"><div class="gin"><p class="gk">Carte du</p><h2>Black Pearl</h2><p class="gs">Trente escales entre Tortuga et le trésor</p></div></div>
       <div class="groll"></div>
       <div class="gband"></div>
       <button class="gseal" id="gseal" type="button" aria-label="Briser le sceau pour ouvrir la carte"><span class="half l">☠</span><span class="half r">☠</span></button>
@@ -646,10 +664,23 @@ footer .law{
 <g class="lid"><path d="M0 56 Q0 22 40 22 Q80 22 80 56Z" fill="#8c5524" stroke="#2a1708" stroke-width="3"/><path d="M0 46 H80" stroke="#c9a23a" stroke-width="5" opacity=".85"/></g>
 </g></svg>
 <h2 id="tT">Le trésor est à toi !</h2>
-<p>Tu as exploré les 20 lieux de l’archipel. Le capitaine est impressionné.</p>
+<p>Tu as exploré les 30 lieux de l’archipel. Le capitaine est impressionné.</p>
 <p>Envoie ce mot de passe au capitaine pour avoir un <b>shot offert</b> à ton arrivée :</p>
 <div class="word" id="tword">Calypso</div>
 <div class="tbtns"><a id="tsms" href="sms:?&amp;body=Calypso">✉ Envoyer un message</a><button id="tcopy" class="alt" type="button">Copier le mot</button><button id="tclose" class="alt" type="button">Fermer</button></div>
+<div class="legend"><h3>Une dernière légende…</h3><p>On murmure qu’une île fantôme se révèle à ceux qui suivent le sillage des damnés. Ouvre ces cinq lieux sur la carte, <b>dans cet ordre</b> :</p><ol><li>Le vaisseau qui ne coule jamais</li><li>Le monstre qui obéit à Jones</li><li>L’or qui maudit</li><li>La sorcière qui voit tout</li><li>Le brouillard où l’on se perd</li></ol></div>
+</div></dialog>
+<dialog id="sdlg" aria-labelledby="sT"><div class="tbox">
+<svg viewBox="-50 -50 100 100" width="120" height="120" aria-hidden="true"><use href="#ic-ghostisle" x="-50" y="-50" width="100" height="100"/></svg>
+<h2 id="sT">L’Île Fantôme</h2>
+<p>Tu as suivi le sillage des damnés. Personne n’était censé la trouver.</p>
+<p>Chuchote ce mot de passe au capitaine. <b>Le premier à le faire</b> gagne la boisson légendaire, <b>The Pirate’s Life</b> :</p>
+<div class="word" id="sword">Pièces de huit</div>
+<div class="tbtns"><a id="ssms" href="sms:?&amp;body=Pi%C3%A8ces%20de%20huit">✉ Envoyer un message</a><button id="scopy" class="alt" type="button">Copier le mot</button><button id="sclose" class="alt" type="button">Fermer</button></div>
+<div class="rec priv"><h4>The Pirate’s Life (≈ 25 cl)</h4><ul>
+<li>3 cl rhum blanc · 3 cl rhum ambré · 2 cl rhum épicé</li><li>2 cl jus de citron vert · 7 cl jus d’ananas · 3 cl jus de fruit de la passion</li><li>1 cl grenadine · 1 cl sirop cannelle-vanille · 3 cl eau gazeuse</li></ul>
+<p>Shaker énergique avec glace (tout sauf l’eau gazeuse). Filtrer dans un grand verre sur glace pilée, ajouter l’eau gazeuse. Ananas, menthe, cerise et paille comestible.</p>
+<p><b>Effet : Le Pavillon Noir.</b> 3 cl de rhum brun dans un petit verre, versé très lentement sur le dos d’une cuillère : le rhum flotte en nappe sombre comme un pavillon. Cocktail costaud (≈ 8 cl de rhum + 3 cl en float) : à déguster doucement.</p></div>
 </div></dialog>
 <dialog id="dlg" aria-labelledby="dT">
   <div class="dbox">
@@ -763,6 +794,69 @@ const ZONES = [
     how:"Remuer thé, miel, citron et pêche avec de la glace, puis compléter à l'eau gazeuse. Une tranche de pêche en garniture."}
   ]
  }
+ ,{
+  title:"Les Récifs du Capitaine",
+  sub:"Six cocktails de plus, de tous les alcools et de tous les horizons, pour les équipages qui en veulent encore",
+  orn:"⚓",
+  type:"alc",
+  items:[
+   {n:"Queen Anne’s Revenge",nod:"Le vaisseau de Barbe Noire, canons chargés",
+    desc:"Mezcal fumé, citron vert et sirop de piment, avec la ginger beer qui fait monter la chaleur. Le navire de Barbe Noire, en feu.",
+    ingr:[["5 cl","mezcal (ou bourbon)"],["2 cl","jus de citron vert"],["1,5 cl","sirop de piment"],["16,5 cl","ginger beer"]],
+    how:"Shaker avec glace : mezcal, citron et sirop de piment. Filtrer sur glaçons, compléter à la ginger beer. Fine tranche de piment ou quartier de citron vert.",
+    tip:"Sirop de piment : chauffer 10 cl de sirop simple avec ½ piment fendu, laisser infuser 30 min à 1 h, filtrer. Goûter avant de doser : le piquant varie.",
+    fx:{n:"La Salve",q:"2 cl",c:"de sirop de grenadine, dans un petit verre",w:"Verser d’un coup au centre : des nuages rouges de poudre noire montent dans le cocktail comme une salve de canons."}},
+   {n:"Jack Sparrow Mule",nod:"Mais vous avez forcément entendu parler du capitaine Jack Sparrow",
+    desc:"Vodka, citron vert et ginger beer bien piquante. Il titube, mais il arrive toujours à bon port.",
+    ingr:[["5 cl","vodka"],["2 cl","jus de citron vert"],["1 cl","sirop de gingembre"],["17 cl","ginger beer"]],
+    how:"Construire dans un grand verre rempli de glaçons : vodka, citron, sirop, compléter à la ginger beer. Remuer une fois. Paille comestible et quartier de citron vert."},
+   {n:"La Vague de Tortuga",nod:"Quand la mer se retourne sur le port",
+    desc:"Tequila blanche, curaçao bleu et citron vert, avec un bord de sel marin : une vague qui retombe sur le comptoir.",
+    ingr:[["4 cl","tequila blanche"],["2 cl","curaçao bleu"],["3 cl","jus de citron vert"],["1 cl","sirop simple"],["15 cl","eau gazeuse"]],
+    how:"Givrer le bord du verre au citron vert puis au sel. Shaker avec glace : tequila, curaçao, citron, sirop. Filtrer sur glace, compléter à l’eau gazeuse."},
+   {n:"Le Remède du Scorbut",nod:"Ce que le médecin de bord prescrit à tout l’équipage",
+    desc:"Whisky, miel, gingembre et citron : chaud en bouche, il guérit tout, ou presque.",
+    ingr:[["5 cl","whisky"],["2 cl","miel dilué (moitié miel, moitié eau chaude)"],["2 cl","jus de citron"],["1 cl","sirop de gingembre"],["15 cl","eau pétillante"]],
+    how:"Shaker avec glace : whisky, miel dilué, citron et sirop de gingembre. Filtrer sur glaçons, compléter à l’eau pétillante. Zeste de citron."},
+   {n:"Le Goudron du Quartier-Maître",nod:"Noir comme les cales du Black Pearl",
+    desc:"Jägermeister, cola et citron vert : épais, sombre et amer, comme le goudron qu’on étale sur la coque.",
+    ingr:[["5 cl","Jägermeister"],["1,5 cl","jus de citron vert"],["18,5 cl","cola"],["2 traits","bitters aromatiques"]],
+    how:"Construire sur glaçons : Jägermeister, citron, compléter au cola. Ajouter les bitters. Tranche d’orange."},
+   {n:"La Fontaine de Jouvence",nod:"L’eau qui rend la jeunesse… ou presque",
+    desc:"Gin, sureau, concombre et basilic : une fraîcheur florale tirée d’une source qu’on dit éternelle.",
+    ingr:[["4 cl","gin"],["2 cl","liqueur de fleur de sureau"],["2 cl","jus de citron vert"],["4","rondelles de concombre"],["5","feuilles de basilic"],["17 cl","eau gazeuse"]],
+    how:"Froisser concombre et basilic au fond du shaker avec le citron. Ajouter gin, sureau et glace. Filtrer sur glace pilée, compléter à l’eau gazeuse. Ruban de concombre.",
+    fx:{n:"Les Gouttes d’Éternité",q:"2 cl",c:"de sirop simple + ½ c. à café de paillettes comestibles dorées, dans un petit verre",w:"Remuer juste avant de verser : les paillettes tombent en tourbillon dans la source, qui scintille comme si elle venait de se réveiller."}}
+  ]
+ }
+ ,{
+  title:"Les Lagons Secrets",
+  sub:"Quatre boissons sans alcool, travaillées comme celles du capitaine",
+  orn:"⚓",
+  type:"zero",
+  items:[
+   {n:"Le Duel du Maelström",nod:"Will Turner contre Davy Jones, au cœur du tourbillon",
+    desc:"Un fond doré, abricot et orange, avec la limonade en vagues. Le petit verre bleu y tourbillonne et vire au vert-turquoise.",
+    ingr:[["8 cl","nectar d’abricot"],["3 cl","jus d’orange"],["1 cl","jus de citron vert"],["1 cl","sirop de gingembre"],["12 cl","limonade"]],
+    how:"Verser nectar, orange, citron et sirop de gingembre sur beaucoup de glaçons, puis compléter doucement à la limonade sans trop remuer.",
+    fx:{n:"Le Coup de Davy Jones",q:"4 cl",c:"de mélange : 1,5 cl de sirop curaçao bleu sans alcool + 1,5 cl de jus de citron vert + 1 cl de limonade, dans un petit verre",w:"Verser au centre devant l’invité : le bleu tourbillonne dans le doré et vire au vert-turquoise. La mer reprend ses droits sur Will."}},
+   {n:"La Perle Noire",nod:"La perle que personne ne rattrape jamais",
+    desc:"Myrtille, citron vert et limonade, noir comme la nuit, avec une perle nacrée qui flotte au-dessus.",
+    ingr:[["6 cl","jus de myrtille"],["2 cl","jus de citron vert"],["1,5 cl","sirop simple"],["1 pincée","charbon végétal alimentaire"],["15,5 cl","limonade"]],
+    how:"Mélanger myrtille, citron, sirop et charbon sur glaçons, compléter à la limonade. Une perle ou un grain de raisin blanc en garniture.",
+    tip:"Le charbon végétal peut diminuer l’effet de certains médicaments : prévenir les invités.",
+    fx:{n:"La Perle Nacrée",q:"3 cl",c:"de limonade + ½ c. à café de paillettes comestibles argentées, dans un petit verre",w:"Remuer le petit verre juste avant de verser : des éclats nacrés tombent dans la nuit du verre comme des perles."}},
+   {n:"Le Médaillon Maudit",nod:"Mille ans d’or, et une malédiction par pièce",
+    desc:"Pamplemousse rose, romarin et tonic : amer, vif et un peu dangereux, comme l’or de Cortés.",
+    ingr:[["8 cl","jus de pamplemousse rose"],["1,5 cl","jus de citron vert"],["1,5 cl","sirop simple"],["14 cl","eau tonique"]],
+    how:"Mélanger pamplemousse, citron et sirop sur glaçons, compléter au tonic. Brin de romarin froissé en garniture.",
+    fx:{n:"La Malédiction de l’Or",q:"2 cl",c:"de sirop simple + ½ c. à café de paillettes comestibles dorées, dans un petit verre",w:"Verser d’un coup : l’or tombe en nuage et le verre s’illumine comme un coffre qui s’ouvre sous la lune."}},
+   {n:"La Boussole de Jack",nod:"Elle ne montre pas le nord, mais ce que l’on désire le plus",
+    desc:"Cerise griotte, citron et limonade, rouge comme l’aiguille qui tourne toute seule.",
+    ingr:[["7 cl","jus de cerise griotte"],["2 cl","jus de citron"],["1 cl","sirop de sucre de canne"],["15 cl","limonade"]],
+    how:"Mélanger cerise, citron et sirop sur glaçons, compléter à la limonade. Une cerise sur pique."}
+  ]
+ }
 ];
 
 /* ===== Réglages visuels de chaque boisson (même ordre que la carte) ===== */
@@ -786,14 +880,25 @@ const VIS=[
  /*16 Lagon du Mousse*/ {c:'#13b4dc',g:'lime',ice:1,fizz:1,fx:{kind:'shift',stream:'#f3c63a',blob:'#f3c63a',colors:['#13b4dc','#18b7b0','#22b97a','#35c05f'],rev:'Le lagon est devenu jungle.'}},
  /*17 Sang du Kraken*/ {c:'#a8142c',g:'orange',ice:1,fizz:1},
  /*18 Nectar*/ {c:'#f5a623',g:'passion',ice:1,fizz:1},
- /*19 Brume*/ {c:'#b06a2c',g:'peach',ice:1,fizz:0,mist:1}
+ /*19 Brume*/ {c:'#b06a2c',g:'peach',ice:1,fizz:0,mist:1},
+ /*20 Queen Anne*/ {c:'#a8341c',g:'lime',ice:1,fizz:1,fx:{kind:'cloud',col:'#6a0f12',stream:'#6a0f12',rev:'La salve a frappé : le navire de Barbe Noire crache sa poudre.'}},
+ /*21 Mule*/ {c:'#e9dc8a',g:'lime',ice:1,fizz:1},
+ /*22 Vague*/ {c:'#2aa7e6',g:'lime',ice:1,fizz:1},
+ /*23 Remède*/ {c:'#dca13a',g:'lemon',ice:1,fizz:1},
+ /*24 Goudron*/ {c:'#26120a',g:'orange',ice:1,fizz:1},
+ /*25 Fontaine*/ {c:'#d6ecb2',g:'mint',ice:1,fizz:1,fx:{kind:'sparkle',cols:['#f7d86b','#ffffff','#bff3d0','#ffe9a0'],stream:'#f1e7c4',tint:.1,rev:'La source a repris vie : l’eau scintille d’or.'}},
+ /*26 Duel*/ {c:'#f3b04a',g:'orange',ice:1,fizz:1,fx:{kind:'shift',stream:'#1db5e6',blob:'#1db5e6',colors:['#f3b04a','#c9c85a','#6dbd6c','#2bb39b'],rev:'La mer a repris ses droits : le tourbillon est vert-turquoise.'}},
+ /*27 Perle Noire*/ {c:'#1c1630',g:'pearl',ice:1,fizz:1,fx:{kind:'sparkle',cols:['#ffffff','#e9e4f5','#cfd8ff','#f6efe4'],stream:'#e9e4f5',tint:0,rev:'La perle nacrée brille dans la nuit.'}},
+ /*28 Médaillon*/ {c:'#f09a8a',g:'orange',ice:1,fizz:1,fx:{kind:'sparkle',cols:['#f7d86b','#ffe9a0','#e0a93a','#fff6cf'],stream:'#f0c850',tint:.18,rev:'L’or maudit éclaire le verre.'}},
+ /*29 Boussole*/ {c:'#8a1a2e',g:'cherry',ice:1,fizz:1}
 ];
 const DEF={c:'#d9a45a',g:'lime',ice:1,fizz:1};
 
 /* Allergènes et points d'attention, même ordre que la carte */
 const AL=[
  ['coco','charbon actif'],[],['miel'],[],[],['fraise'],['amande','quinine'],['sulfites'],[],[],
- ['coco'],[],[],['coco'],['caféine','quinine'],[],[],[],[],['caféine','miel']
+ ['coco'],[],[],['coco'],['caféine','quinine'],[],[],[],[],['caféine','miel'],
+ [],[],[],['miel'],['caféine'],[],[],['charbon actif'],['quinine'],[]
 ];
 const allerg=i=>{const a=AL[i]||[];return a.length
   ?`<p class="allerg"><b>Contient</b> ${a.map(t=>`<span class="tag" data-t="${t}">${t}</span>`).join(' · ')}</p>`
@@ -1253,8 +1358,20 @@ const SPOTS=[
  {x:560,y:1050,ic:'fish',an:'bob',L:['Lagon du','Mousse']},
  {x:385,y:985,ic:'tent',an:'sway',L:['Sang du','Kraken']},
  {x:225,y:1065,ic:'skull',an:'',L:['Nectar de l’','Île de Muerta']},
- {x:90,y:975,ic:'fog',an:'drift',L:['Brume de','Tortuga']}
+ {x:90,y:975,ic:'fog',an:'drift',L:['Brume de','Tortuga']},
+ {x:150,y:1370,ic:'queen',an:'bob',L:['Queen Anne’s','Revenge']},
+ {x:450,y:1350,ic:'mug',an:'sway',L:['Jack Sparrow','Mule']},
+ {x:750,y:1390,ic:'wave',an:'drift',L:['Vague de','Tortuga']},
+ {x:750,y:1585,ic:'flask',an:'glint',L:['Remède du','Scorbut']},
+ {x:450,y:1575,ic:'tar',an:'',L:['Goudron du','Quartier-Maître']},
+ {x:150,y:1595,ic:'spring',an:'bob',L:['Fontaine de','Jouvence']},
+ {x:130,y:1830,ic:'swords',an:'beat',L:['Duel du','Maelström']},
+ {x:345,y:1815,ic:'blackpearl',an:'glint',L:['Perle','Noire']},
+ {x:565,y:1830,ic:'medal',an:'glint',L:['Médaillon','Maudit']},
+ {x:785,y:1815,ic:'compass',an:'bob',L:['Boussole','de Jack']}
 ];
+const GHOST={x:440,y:1150};
+const MAPH=2040;
 const LANDS=[
  'M530 190 C570 150 660 140 730 170 C800 195 860 230 868 300 C876 380 850 430 856 500 C862 580 840 620 770 640 C700 655 660 630 600 610 C540 590 515 540 520 480 C525 430 560 410 545 350 C532 300 505 230 530 190 Z',
  'M375 300 C380 270 430 255 470 270 C505 285 510 325 475 340 C440 355 385 345 375 300 Z',
@@ -1264,8 +1381,18 @@ const LANDS=[
  'M718 800 C722 772 770 762 800 780 C825 800 810 835 770 842 C735 846 714 826 718 800 Z',
  'M670 960 C690 925 760 920 800 945 C830 970 815 1010 770 1020 C725 1030 660 1000 670 960 Z',
  'M175 1060 C180 1030 245 1020 280 1045 C305 1068 290 1100 250 1108 C205 1115 168 1090 175 1060 Z',
- 'M-10 1238 C150 1218 300 1252 450 1238 C600 1226 750 1254 910 1232 L910 1310 L-10 1310 Z'
+ 'M-10 1985 C150 1965 300 1999 450 1985 C600 1973 750 2001 910 1979 L910 2060 L-10 2060 Z'
 ];
+function blob(cx,cy,rx,ry,seed){
+  const R=rng(seed),n=9,pts=[];
+  for(let i=0;i<n;i++){const a=i/n*Math.PI*2,k=.82+R()*.3;pts.push({x:+(cx+Math.cos(a)*rx*k).toFixed(0),y:+(cy+Math.sin(a)*ry*k).toFixed(0)})}
+  let d=`M${pts[0].x} ${pts[0].y}`;
+  for(let i=0;i<n;i++){const p0=pts[(i+n-1)%n],p1=pts[i],p2=pts[(i+1)%n],p3=pts[(i+2)%n];
+    d+=` C${(p1.x+(p2.x-p0.x)/6).toFixed(0)} ${(p1.y+(p2.y-p0.y)/6).toFixed(0)} ${(p2.x-(p3.x-p1.x)/6).toFixed(0)} ${(p2.y-(p3.y-p1.y)/6).toFixed(0)} ${p2.x} ${p2.y}`}
+  return d+' Z';
+}
+[[150,1370,92,56],[450,1350,92,56],[750,1390,92,58],[750,1585,92,56],[450,1575,92,56],[150,1595,92,56],
+ [130,1830,76,50],[345,1815,76,50],[565,1830,76,50],[785,1815,76,50]].forEach((a,i)=>LANDS.splice(LANDS.length-1,0,blob(a[0],a[1],a[2],a[3],40+i)));
 const ICONS={
  pearl:`<path d="M-34 14 C-14 28 14 28 34 14 L28 26 C10 34 -10 34 -28 26 Z" style="fill:var(--sf,#14100c)" stroke="#3a2812" stroke-width="1.5"/><g stroke="#3a2812" stroke-width="2.4"><line x1="0" y1="16" x2="0" y2="-36"/><line x1="-18" y1="16" x2="-18" y2="-20"/><line x1="18" y1="16" x2="18" y2="-22"/></g><path d="M0 -34 Q10 -10 0 12 L-14 10 Q-8 -10 -6 -32 Z" style="fill:var(--sf,#14100c)"/><path d="M-18 -18 Q-10 -2 -18 12 L-30 10 Q-26 -2 -24 -16Z" style="fill:var(--sf,#14100c)"/><path d="M18 -20 Q26 -4 18 12 L6 10 Q10 -4 12 -18Z" style="fill:var(--sf,#14100c)"/><path d="M0 -36 L14 -31 L0 -26Z" fill="#8c2a1a"/>`,
  chest:`<rect x="-24" y="-2" width="48" height="26" rx="3" fill="#8a5a2b" stroke="#3a2812" stroke-width="2"/><path d="M-24 -2 Q0 -28 24 -2Z" fill="#a8723a" stroke="#3a2812" stroke-width="2"/><g stroke="#3a2812" stroke-width="2"><line x1="-12" y1="-14" x2="-12" y2="24"/><line x1="12" y1="-14" x2="12" y2="24"/></g><rect x="-5" y="4" width="10" height="11" rx="2" fill="#e8c64a" stroke="#3a2812" stroke-width="1.5"/><g stroke="#e8c64a" stroke-width="2.4" stroke-linecap="round"><line x1="0" y1="-34" x2="0" y2="-26"/><line x1="-18" y1="-28" x2="-13" y2="-22"/><line x1="18" y1="-28" x2="13" y2="-22"/></g>`,
@@ -1285,10 +1412,21 @@ const ICONS={
  fish:`<path d="M-24 0 Q-4 -20 20 0 Q-4 20 -24 0Z" fill="#35c0c0" stroke="#3a2812" stroke-width="2"/><path d="M20 0 L36 -14 L36 14Z" fill="#35c0c0" stroke="#3a2812" stroke-width="2" stroke-linejoin="round"/><circle cx="-12" cy="-3" r="3" fill="#3a2812"/><g fill="#fff" opacity=".85" stroke="#2b5d57" stroke-width="1"><circle cx="-30" cy="-16" r="3.4"/><circle cx="-22" cy="-26" r="2.4"/></g>`,
  tent:`<g stroke="#3a2812" stroke-width="12" fill="none" stroke-linecap="round"><path d="M-22 30 C-34 8 -14 -4 -22 -24"/><path d="M0 30 C-8 6 14 -4 4 -34"/><path d="M22 30 C32 10 12 0 24 -20"/></g><g stroke="#a8142c" stroke-width="8.4" fill="none" stroke-linecap="round"><path d="M-22 30 C-34 8 -14 -4 -22 -24"/><path d="M0 30 C-8 6 14 -4 4 -34"/><path d="M22 30 C32 10 12 0 24 -20"/></g><g fill="#f4b6a8"><circle cx="-27" cy="12" r="1.8"/><circle cx="-20" cy="-2" r="1.8"/><circle cx="4" cy="8" r="1.8"/><circle cx="8" cy="-14" r="1.8"/><circle cx="27" cy="12" r="1.8"/></g>`,
  skull:`<path d="M-26 24 C-32 -6 -14 -28 0 -28 C14 -28 32 -6 26 24Z" fill="#d9c9a0" stroke="#3a2812" stroke-width="2.2"/><g fill="#3a2812"><ellipse cx="-10" cy="-6" rx="6" ry="7"/><ellipse cx="10" cy="-6" rx="6" ry="7"/><path d="M0 4 L-4 12 L4 12Z"/></g><g stroke="#3a2812" stroke-width="1.6"><line x1="-10" y1="18" x2="-10" y2="24"/><line x1="0" y1="18" x2="0" y2="24"/><line x1="10" y1="18" x2="10" y2="24"/></g><g fill="#f5a623" stroke="#3a2812" stroke-width="1.2"><circle cx="32" cy="14" r="7"/><circle cx="-34" cy="18" r="6" fill="#f1cf55"/></g>`,
+ queen:`<path d="M-34 14 C-14 28 14 28 34 14 L28 26 C10 34 -10 34 -28 26 Z" fill="#2a1a1a" stroke="#3a2812" stroke-width="1.5"/><g stroke="#3a2812" stroke-width="2.4"><line x1="0" y1="16" x2="0" y2="-34"/><line x1="-18" y1="16" x2="-18" y2="-20"/><line x1="18" y1="16" x2="18" y2="-20"/></g><path d="M0 -32 Q10 -10 0 12 L-14 10 Q-8 -10 -6 -30Z" fill="#8c2a1a"/><path d="M-18 -18 Q-10 -2 -18 12 L-30 10 Q-26 -2 -24 -16Z" fill="#8c2a1a"/><path d="M18 -18 Q26 -4 18 12 L6 10 Q10 -4 12 -16Z" fill="#8c2a1a"/><path d="M0 -36 q-9 -9 -2 -17 q2 6 8 4 q-2 6 2 9 q-4 8 -8 4z" fill="#f08a2a" stroke="#c4492c" stroke-width="1"/>`,
+ mug:`<path d="M-20 -14 L20 -14 L16 26 Q0 32 -16 26Z" fill="#c97a3a" stroke="#3a2812" stroke-width="2.2"/><path d="M20 -6 q16 0 14 14 q-2 10 -16 8" fill="none" stroke="#3a2812" stroke-width="4.4" stroke-linecap="round"/><path d="M20 -6 q16 0 14 14 q-2 10 -16 8" fill="none" stroke="#c97a3a" stroke-width="1.8"/><ellipse cx="0" cy="-14" rx="20" ry="5" fill="#f3e3b0" stroke="#3a2812" stroke-width="2"/><line x1="8" y1="-12" x2="18" y2="-40" stroke="#e85a8a" stroke-width="3.4" stroke-linecap="round"/><circle cx="-12" cy="-24" r="9" fill="#d3ec8c" stroke="#3a2812" stroke-width="1.6"/><path d="M-12 -33 V-15 M-21 -24 H-3" stroke="#5f9b2f" stroke-width="1.2"/>`,
+ wave:`<path d="M-38 24 C-34 -4 -10 -26 14 -22 C34 -18 36 6 22 8 C18 -2 6 -6 0 2 C-6 12 4 22 14 24Z" fill="#2aa7e6" stroke="#3a2812" stroke-width="2.2" stroke-linejoin="round"/><path d="M-30 24 H34" stroke="#3a2812" stroke-width="2.2" stroke-linecap="round"/><g fill="#fff" opacity=".9"><circle cx="20" cy="-14" r="2.6"/><circle cx="28" cy="-4" r="2"/><circle cx="12" cy="-26" r="2"/></g><path d="M-22 10 q10 -12 24 -10" fill="none" stroke="#e8f6ff" stroke-width="2" stroke-linecap="round"/>`,
+ flask:`<path d="M-8 -30 H8 V-14 C24 -6 26 8 24 20 Q22 30 0 30 Q-22 30 -24 20 C-26 8 -24 -6 -8 -14Z" fill="#e0a838" stroke="#3a2812" stroke-width="2.2"/><rect x="-10" y="-36" width="20" height="8" rx="2" fill="#8a5a2b" stroke="#3a2812" stroke-width="2"/><path d="M0 4 V22 M-9 13 H9" stroke="#8c2a1a" stroke-width="5" stroke-linecap="round"/><path d="M-18 6 q2 -8 10 -12" fill="none" stroke="#fff3c0" stroke-width="2" stroke-linecap="round"/>`,
+ tar:`<path d="M-22 -10 L22 -10 L17 28 Q0 34 -17 28Z" fill="#241a14" stroke="#3a2812" stroke-width="2.2"/><ellipse cx="0" cy="-10" rx="22" ry="6" fill="#0f0b08" stroke="#3a2812" stroke-width="2"/><path d="M-22 -10 q22 -34 44 0" fill="none" stroke="#3a2812" stroke-width="2.4"/><path d="M-12 -4 q-2 16 2 22 M8 -4 q2 12 -2 20" fill="none" stroke="#0f0b08" stroke-width="4" stroke-linecap="round"/><path d="M26 -20 q14 -10 14 12 q-14 4 -14 -12z" fill="#e8e0cf" stroke="#3a2812" stroke-width="1.6"/>`,
+ spring:`<path d="M-30 22 H30 L24 32 H-24Z" fill="#c9c3b0" stroke="#3a2812" stroke-width="2"/><path d="M-6 22 V0 H6 V22Z" fill="#d9d3c0" stroke="#3a2812" stroke-width="2"/><path d="M0 0 C-14 -10 -28 -4 -26 8 M0 0 C14 -10 28 -4 26 8 M0 0 C-4 -16 -2 -28 0 -34" fill="none" stroke="#35c0c0" stroke-width="3" stroke-linecap="round"/><g fill="#9fe6e6" stroke="#2b5d57" stroke-width="1"><circle cx="-28" cy="14" r="2.6"/><circle cx="28" cy="14" r="2.6"/><circle cx="0" cy="-38" r="3"/></g><path d="M-36 30 q-2 -10 6 -10 M36 30 q2 -10 -6 -10" fill="none" stroke="#2f6e5e" stroke-width="3" stroke-linecap="round"/>`,
+ swords:`<g stroke="#3a2812" stroke-width="2"><path d="M-30 -30 L8 8 L2 14 L-36 -24Z" fill="#cfd6dc"/><path d="M30 -30 L-8 8 L-2 14 L36 -24Z" fill="#e8ecef"/></g><g stroke="#3a2812" stroke-width="4" stroke-linecap="round"><line x1="-6" y1="14" x2="14" y2="2"/><line x1="6" y1="14" x2="-14" y2="2"/></g><g stroke="#3a2812" stroke-width="5" stroke-linecap="round"><line x1="12" y1="12" x2="22" y2="30"/><line x1="-12" y1="12" x2="-22" y2="30"/></g><circle cx="22" cy="32" r="3.5" fill="#e8c64a" stroke="#3a2812"/><circle cx="-22" cy="32" r="3.5" fill="#e8c64a" stroke="#3a2812"/><path d="M0 -12 l3 6 6 1 -5 4 1 6 -5 -3 -5 3 1 -6 -5 -4 6 -1z" fill="#ffe27a" stroke="#3a2812" stroke-width="1.2"/>`,
+ blackpearl:`<path d="M-30 6 Q-30 -14 0 -14 Q30 -14 30 6 Q30 26 0 30 Q-30 26 -30 6Z" fill="#cbb89a" stroke="#3a2812" stroke-width="2.2"/><path d="M-26 6 Q0 -2 26 6" fill="none" stroke="#3a2812" stroke-width="1.4" opacity=".6"/><circle cx="0" cy="-2" r="15" fill="#15110f" stroke="#3a2812" stroke-width="2"/><circle cx="-5" cy="-8" r="4.5" fill="#fff" opacity=".7"/><circle cx="5" cy="2" r="2" fill="#6b6bd6" opacity=".6"/><g fill="#fff" opacity=".9"><circle cx="-32" cy="-24" r="2.4"/><circle cx="30" cy="-26" r="2"/></g>`,
+ medal:`<circle r="30" fill="#e6c14a" stroke="#3a2812" stroke-width="2.4"/><circle r="23" fill="none" stroke="#a67c1e" stroke-width="2"/><path d="M-9 8 C-12 -4 -6 -12 0 -12 C6 -12 12 -4 9 8Z" fill="#3a2812"/><g fill="#e6c14a"><circle cx="-4" cy="-3" r="2.4"/><circle cx="4" cy="-3" r="2.4"/></g><g stroke="#a67c1e" stroke-width="2.4" stroke-linecap="round"><line x1="-18" y1="-18" x2="-24" y2="-24"/><line x1="18" y1="-18" x2="24" y2="-24"/><line x1="-18" y1="18" x2="-24" y2="24"/><line x1="18" y1="18" x2="24" y2="24"/></g>`,
+ compass:`<circle r="30" fill="#e8d6a8" stroke="#3a2812" stroke-width="2.4"/><circle r="25" fill="none" stroke="#3a2812" stroke-width="1" stroke-dasharray="3 3"/><g transform="rotate(36)"><polygon points="0,-22 5,0 0,4 -5,0" fill="#8c2a1a" stroke="#3a2812" stroke-width="1.2"/><polygon points="0,22 5,0 0,-4 -5,0" fill="#3a2812"/></g><circle r="3" fill="#e8c64a" stroke="#3a2812"/>`,
+ ghostisle:`<path d="M-36 20 C-30 -2 -14 -14 0 -14 C14 -14 30 -2 36 20 Q0 32 -36 20Z" fill="#dfe8ea" fill-opacity=".8" stroke="#8aa5ab" stroke-width="2" stroke-dasharray="4 3"/><path d="M-4 -14 V-34 L12 -28 L-4 -22" fill="#cfe0e3" stroke="#8aa5ab" stroke-width="1.6"/><g fill="#fff" stroke="#8aa5ab" stroke-width="1.4"><circle cx="-14" cy="4" r="3.2"/><circle cx="14" cy="8" r="3.2"/></g>`,
  fog:`<g fill="#dfe8ea" stroke="#9fb3b8" stroke-width="1.6" opacity=".92"><circle cx="-24" cy="6" r="14"/><circle cx="-6" cy="-6" r="19"/><circle cx="16" cy="2" r="16"/><circle cx="30" cy="12" r="11"/><rect x="-36" y="6" width="76" height="16" rx="8" stroke="none"/></g><g stroke="#3a2812" stroke-width="2.4" stroke-linecap="round" opacity=".7"><line x1="-4" y1="-22" x2="-4" y2="-40"/><path d="M-4 -40 L8 -34 L-4 -30" fill="#3a2812"/></g>`
 };
 const MTN=[[640,395,1],[705,420,.8],[612,368,.75]];
-const PALM=[[835,440],[822,612],[560,438],[346,700],[488,704],[662,722],[800,985]];
+const PALM=[[835,440],[822,612],[560,438],[346,700],[488,704],[662,722],[800,985],[228,1335],[672,1420],[812,1560],[96,1630],[520,1600],[210,1840],[690,1850]];
 
 function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
 function catmull(pts){
@@ -1307,9 +1445,9 @@ function buildMap(){
   const R=rng(11);
   const route=catmull(SPOTS);
   let waves='';
-  for(let i=0;i<110;i++){
-    const x=40+R()*820,y=110+R()*1130;
-    if(SPOTS.some(s=>Math.hypot(s.x-x,s.y-y)<100))continue;
+  for(let i=0;i<175;i++){
+    const x=40+R()*820,y=110+R()*(MAPH-190);
+    if(SPOTS.some(s=>Math.hypot(s.x-x,s.y-y)<100)||Math.hypot(GHOST.x-x,GHOST.y-y)<110)continue;
     waves+=`M${x.toFixed(0)} ${y.toFixed(0)} q6 -6 12 0 t12 0 `;
   }
   const paths=LANDS.map((d,i)=>`<path id="ld${i}" d="${d}"/>`).join('');
@@ -1332,13 +1470,14 @@ function buildMap(){
 <filter id="rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="7"/></filter>
 <radialGradient id="badgeG" cx=".35" cy=".3"><stop offset="0" stop-color="#c4492c"/><stop offset="1" stop-color="#8c2a1a"/></radialGradient>
 <radialGradient id="goldG" cx=".35" cy=".3"><stop offset="0" stop-color="#f6dc7a"/><stop offset="1" stop-color="#a67c1e"/></radialGradient>
-<mask id="rmask" maskUnits="userSpaceOnUse" x="0" y="0" width="900" height="1300"><path id="rreveal" d="${route}" pathLength="1" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round"/></mask>
+<mask id="rmask" maskUnits="userSpaceOnUse" x="0" y="0" width="900" height="2040"><path id="rreveal" d="${route}" pathLength="1" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round"/></mask>
 ${paths}${symbols}
 </defs>
-<rect x="14" y="14" width="872" height="1272" fill="none" stroke="#3a2812" stroke-width="3"/>
-<rect x="26" y="26" width="848" height="1248" fill="none" stroke="#3a2812" stroke-width="1" stroke-dasharray="3 6"/>
+<rect x="14" y="14" width="872" height="2012" fill="none" stroke="#3a2812" stroke-width="3"/>
+<rect x="26" y="26" width="848" height="1988" fill="none" stroke="#3a2812" stroke-width="1" stroke-dasharray="3 6"/>
 <path class="waves" d="${waves}"/>
 <ellipse class="calm" cx="450" cy="1045" rx="415" ry="170"/>
+<ellipse class="calm" cx="450" cy="1832" rx="425" ry="165"/>
 <g class="cloud"><g fill="#fff" opacity=".7"><circle cx="150" cy="150" r="22"/><circle cx="178" cy="142" r="28"/><circle cx="210" cy="152" r="20"/></g></g>
 <g class="cloud" style="animation-duration:55s"><g fill="#fff" opacity=".6"><circle cx="620" cy="132" r="20"/><circle cx="648" cy="124" r="26"/><circle cx="680" cy="134" r="18"/></g></g>
 <g filter="url(#rough)">${lands}</g>
@@ -1347,8 +1486,11 @@ ${PALM.map(p=>palm(...p)).join('')}
 <text class="ttl" x="450" y="86">L’Archipel du Black Pearl</text>
 <text class="zone" x="450" y="132" fill="#5b4122" opacity=".75">LES GRANDES MARÉES · AVEC ALCOOL</text>
 <text class="zone" x="450" y="918" fill="#2b5d57" opacity=".9">LES EAUX CALMES · SANS ALCOOL</text>
+<text class="zone" x="450" y="1262" fill="#5b4122" opacity=".75">LES RÉCIFS DU CAPITAINE · AVEC ALCOOL</text>
+<text class="zone" x="450" y="1722" fill="#2b5d57" opacity=".9">LES LAGONS SECRETS · SANS ALCOOL</text>
 <path id="route" d="${route}" mask="url(#rmask)" fill="none" stroke="#8c2a1a" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 11"/>
-<g transform="translate(810 1190)"><circle r="62" fill="none" stroke="#3a2812" stroke-width="2"/><circle r="52" fill="none" stroke="#3a2812" stroke-width="1" stroke-dasharray="3 5"/><polygon points="0,-60 9,-9 0,0 -9,-9" fill="#8c2a1a"/><polygon points="0,60 9,9 0,0 -9,9" fill="#3a2812"/><polygon points="-60,0 -9,-9 0,0 -9,9" fill="#3a2812"/><polygon points="60,0 9,-9 0,0 9,9" fill="#3a2812"/><circle r="5" fill="#f0e2b8" stroke="#3a2812" stroke-width="1.5"/><text class="cn" y="-70">N</text></g>
+<g transform="translate(810 1170)"><circle r="62" fill="none" stroke="#3a2812" stroke-width="2"/><circle r="52" fill="none" stroke="#3a2812" stroke-width="1" stroke-dasharray="3 5"/><polygon points="0,-60 9,-9 0,0 -9,-9" fill="#8c2a1a"/><polygon points="0,60 9,9 0,0 -9,9" fill="#3a2812"/><polygon points="-60,0 -9,-9 0,0 -9,9" fill="#3a2812"/><polygon points="60,0 9,-9 0,0 9,9" fill="#3a2812"/><circle r="5" fill="#f0e2b8" stroke="#3a2812" stroke-width="1.5"/><text class="cn" y="-70">N</text></g>
+<g id="ghostSpot" class="gspot" transform="translate(${GHOST.x} ${GHOST.y})" tabindex="-1" role="button" aria-label="Île fantôme" aria-hidden="true"><circle class="hitc" r="78"/><g class="ico"><g class="anim drift"><use href="#ic-ghostisle" x="-50" y="-50" width="100" height="100"/></g></g><text class="lbl" y="62" style="fill:#5b7077">Île Fantôme</text></g>
 ${spots}
 ${RM?'':'<g><path d="M-9 4 L9 4 L5 11 L-5 11Z" fill="#14100c"/><line x1="0" y1="4" x2="0" y2="-12" stroke="#14100c" stroke-width="1.8"/><path d="M0 -12 Q8 -5 0 2Z" fill="#14100c"/><animateMotion dur="75s" repeatCount="indefinite" rotate="0"><mpath href="#route"/></animateMotion></g>'}`;
   if(RM)mapSvg.querySelector('#rreveal').style.strokeDashoffset=0;
@@ -1364,7 +1506,7 @@ function markSeen(i){
   $('#nSeen').textContent=seen.size;
   if(seen.size===ALL.length){const e=$('#explo');e.classList.add('done');e.innerHTML='✦ Tout l’archipel est exploré. Bravo, moussaillon ! ✦'}
 }
-const VB0=[0,0,900,1300];
+const VB0=[0,0,900,MAPH];
 let vb=VB0.slice(),zoomI=-1,vbId=0;
 function setVB(a){vb=a;mapSvg.setAttribute('viewBox',a.map(n=>n.toFixed(1)).join(' '))}
 function vbTween(to,ms){
@@ -1385,7 +1527,7 @@ function zoomTo(i){
   if(zoomI===i)return Promise.resolve();
   const was=zoomI>=0;zoomI=i;
   const s=SPOTS[i],w=450,h=650;
-  const x=Math.max(0,Math.min(900-w,s.x-w/2)),y=Math.max(0,Math.min(1300-h,s.y-h/2));
+  const x=Math.max(0,Math.min(900-w,s.x-w/2)),y=Math.max(0,Math.min(MAPH-h,s.y-h/2));
   return vbTween([x,y,w,h],was?450:650);
 }
 function zoomOut(){zoomI=-1;return vbTween(VB0,600)}
@@ -1406,7 +1548,7 @@ const fogB=[];
 (function(){
   if(RM)return;
   const R=rng(5);let s='<defs><radialGradient id="fogGr"><stop offset="0" stop-color="#eef3f2" stop-opacity=".97"/><stop offset=".6" stop-color="#e3ebea" stop-opacity=".88"/><stop offset="1" stop-color="#e3ebea" stop-opacity="0"/></radialGradient></defs>';
-  for(let gy=0;gy<=1300;gy+=170)for(let gx=0;gx<=900;gx+=170){
+  for(let gy=0;gy<=MAPH;gy+=170)for(let gx=0;gx<=900;gx+=170){
     const x=gx+(R()-.5)*60,y=gy+(R()-.5)*60;
     s+=`<g class="fb" data-x="${x.toFixed(0)}" data-y="${y.toFixed(0)}"><g class="fd" style="animation-delay:${(-R()*14).toFixed(1)}s"><circle cx="${x.toFixed(0)}" cy="${y.toFixed(0)}" r="${(150+R()*40).toFixed(0)}" fill="url(#fogGr)"/></g></g>`;
   }
@@ -1452,6 +1594,37 @@ $('#tclose').addEventListener('click',()=>tdlg.close());
 $('#tcopy').addEventListener('click',()=>{const b=$('#tcopy');try{navigator.clipboard.writeText('Calypso').then(()=>{b.textContent='Copié ✓'})}catch(_){b.textContent='Calypso'}});
 $('#explo').addEventListener('click',()=>{if(seen.size===ALL.length)openTreasure()});
 dlg.addEventListener('close',()=>{if(seen.size===ALL.length&&!openTreasure.done){openTreasure.done=1;setTimeout(openTreasure,700)}});
+
+
+/* Île fantôme : se révèle quand on explore les bons lieux, dans le bon ordre */
+const SEQ=[1,17,3,6,19];let hist=[],ghostPending=false,ghostDone=false;
+const ghostEl=$('#ghostSpot');
+function noteSpot(i){
+  if(ghostDone)return;
+  hist.push(i);if(hist.length>SEQ.length)hist.shift();
+  if(hist.length===SEQ.length&&hist.every((v,k)=>v===SEQ[k]))ghostPending=true;
+}
+async function revealGhost(){
+  if(ghostDone)return;ghostDone=true;ghostPending=false;
+  try{storm()}catch(_){}
+  try{clearFog(GHOST.x,GHOST.y,400)}catch(_){}
+  ghostEl.classList.add('show');ghostEl.setAttribute('tabindex','0');ghostEl.removeAttribute('aria-hidden');
+  zoomI=-1;
+  await vbTween([Math.max(0,GHOST.x-225),Math.max(0,GHOST.y-325),450,650],1600);
+}
+const sdlg=$('#sdlg');
+function openSecret(){
+  try{sdlg.showModal()}catch(e){sdlg.setAttribute('open','')}
+  try{snd('clink',1)}catch(_){}
+}
+mapSvg.addEventListener('click',e=>{if(e.target.closest('.gspot.show'))openSecret()});
+mapSvg.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.closest&&e.target.closest('.gspot.show')){e.preventDefault();openSecret()}});
+$('#sclose').addEventListener('click',()=>sdlg.close());
+sdlg.addEventListener('close',()=>vbTween(VB0,800));
+$('#scopy').addEventListener('click',()=>{const b=$('#scopy');try{navigator.clipboard.writeText('Pièces de huit').then(()=>{b.textContent='Copié ✓'})}catch(_){b.textContent='Pièces de huit'}});
+dlg.addEventListener('close',()=>{if(ghostPending)setTimeout(revealGhost,900)});
+const _goSpot2=goSpot;
+goSpot=async function(i){noteSpot(i);return _goSpot2(i)};
 
 function centerScroll(){const s=$('#mapscroll');requestAnimationFrame(()=>{s.scrollLeft=(s.scrollWidth-s.clientWidth)/2})}
 function setView(v){
